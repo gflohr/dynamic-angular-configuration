@@ -5,10 +5,10 @@ This project is an accompanying git repository to the blog post
 
 ## Description
 
-The conventional Angular approach is to compile configuration into the build
-image, so that you have create a separate build for every environment that
-you support.  This repo follows a different approach and loads the configuration
-at runtime.  See [Dynamic Angular
+The conventional Angular approach of compiling configuration into the build
+image forces you to create a separate build for every environment that
+you support. This repo follows a different approach and loads the configuration
+at runtime. See [Dynamic Angular
 Configuration](https://www.guido-flohr.net/dynamic-angular-configuration/) for
 more details.
 
