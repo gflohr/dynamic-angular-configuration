@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CONFIGURATION, Configuration } from './configuration';
 
 @Component({
 	selector: 'app-root',
@@ -9,5 +10,14 @@ import { RouterOutlet } from '@angular/router';
 	styleUrl: './app.component.css',
 })
 export class AppComponent {
-	title = 'dynamic-angular-configuration';
+	description: string;
+	answer: number;
+
+	constructor(
+		@Inject(CONFIGURATION)
+		private configuration: Configuration,
+	) {
+		this.description = this.configuration.description;
+		this.answer = this.configuration.answers?.all as number;
+	}
 }
