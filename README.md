@@ -1,10 +1,16 @@
 # DynamicAngularConfiguration
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+This project is an accompanying git repository to the blog post
+[Dynamic Angular Configuration](https://www.guido-flohr.net/dynamic-angular-configuration/).
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The conventional Angular approach is to compile configuration into the build
+image, so that you have create a separate build for every environment that
+you support.  This repo follows a different approach and loads the configuration
+at runtime.  See [Dynamic Angular
+Configuration](https://www.guido-flohr.net/dynamic-angular-configuration/) for
+more details.
 
 ## Code scaffolding
 
@@ -25,3 +31,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Copyright
+
+This project is Copyright (C) by Guido Flohr <https://www.guido-flohr.net/> but
+that should not stop you to do with it whatever you want to, see
+[./LICENSE](./LICENSE) for all the gory details.
