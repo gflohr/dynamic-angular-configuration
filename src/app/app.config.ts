@@ -9,7 +9,9 @@ import {
 	ConfigurationSchema,
 } from './configuration';
 
-export const createAppConfig = async (): Promise<ApplicationConfig> => {
+export const createAppConfig = async (
+	location: Location,
+): Promise<ApplicationConfig> => {
 	const configurationPath = locateConfiguration(location);
 	const response = await fetch(configurationPath);
 	const json = await response.json();
@@ -24,6 +26,7 @@ export const createAppConfig = async (): Promise<ApplicationConfig> => {
 };
 
 const locateConfiguration = (location: Location): string => {
+	console.log(`location.hostname is ${location.hostname}`);
 	if (location.hostname === 'localhost') {
 		return './assets/config.dev.json';
 	} else {
@@ -31,7 +34,7 @@ const locateConfiguration = (location: Location): string => {
 	}
 };
 
-const parseConfiguration = (configuration: unknown): Configuration => {
+export const parseConfiguration = (configuration: unknown): Configuration => {
 	try {
 		return v.parse(ConfigurationSchema, configuration);
 	} catch (e) {
