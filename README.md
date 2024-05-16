@@ -36,4 +36,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 This project is Copyright (C) by Guido Flohr <https://www.guido-flohr.net/> but
 that should not stop you to do with it whatever you want to, see
-[./LICENSE](./LICENSE) for all the gory details.
+[LICENSE](./LICENSE) for all the gory details.
